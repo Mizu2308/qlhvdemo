@@ -1,5 +1,5 @@
 <?php
-$conn=mysqli_connect("localhost","root","","ql_sinhvien");
+$conn=mysqli_connect("localhost","root","","qlsv");
 // Check connection
 if (mysqli_connect_errno())
   {
@@ -8,6 +8,6 @@ if (mysqli_connect_errno())
 
 // Change character set to utf8
 mysqli_set_charset($conn,"utf8");
-$url = "http://localhost/sms/ql_sinhvien/";
+$url = "http://localhost/qlhvdemo/sms/ql_sinhvien/";
 error_reporting(0);
 ?>

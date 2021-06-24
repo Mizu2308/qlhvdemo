@@ -35,7 +35,7 @@
       	</span> Đã tồn tại, Vui lòng vào <a href="admin?menu=quanly" style="color:#FFF"><strong>QUẢN LÝ SINH VIÊN</strong></a> để cập nhật thông tin.
     	</div>
 	<?php } else{
-		$themsv = "INSERT INTO `tai_khoan` (`ten_tai_khoan`, `mat_khau`, `nhom_tai_khoan`, `ten_sinh_vien`, `lop_sinh_vien`, `khoa_sinh_vien`, `sdt`, `ngay_sinh`, `anh_dai_dien`, `nhan_xet`, `ngay_tao`) VALUES ('$masv', '$matkhau', '0', '$tensv', '$svlop', '$ten_khoa', '$sdt', '$ngaysinh', 'avatardf.png', '$nhanxet', NOW())";
+		$themsv = "INSERT INTO `tai_khoan` (`ten_tai_khoan`, `mat_khau`, `nhom_tai_khoan`, `ten_sinh_vien`, `lop_sinh_vien`, `khoa_sinh_vien`, `sdt`, `ngay_sinh`, `anh_dai_dien`, `nhan_xet`, `ngay_tao`) VALUES ('$masv', '$matkhau', '0', '$tensv', '$svlop', '$ten_khoa', '$sdt', '$ngaysinh', 'avatardf.jpg', '$nhanxet', NOW())";
 		mysqli_query($conn, $themsv); ?>
 			<div class="alert alert-success fade in" role="alert">
 	      	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>

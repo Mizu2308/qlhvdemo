@@ -21,6 +21,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
           </button>
           <a class="navbar-brand">
             <?php
@@ -28,6 +29,8 @@
                 echo "Bảng Điều Khiển";
               } elseif($_GET["menu"] == "them"){
                 echo "Thêm Sinh Viên";
+              } elseif($_GET["menu"] == "themgv"){
+                echo "Thêm Giang Vien";
               } elseif($_GET["menu"] == "quanlysv"){
                 echo "Quản Lý Sinh viên";
               } elseif($_GET["menu"] == "quanlykhoa"){
@@ -47,6 +50,10 @@
             <li><a href="?menu=them" id="themsv">
             <span class="glyphicon glyphicon-plus"></span>
             Thêm Sinh Viên
+            </a></li>
+            <li><a href="?menu=themgv" id="themgv">
+            <span class="glyphicon glyphicon-plus"></span>
+            Thêm Giang vien
             </a></li>
             <li><a href="?menu=quanlykhoa" id="quanlykhoa">
             <span class="glyphicon glyphicon-cog"></span>
@@ -96,6 +103,10 @@
 			  <span style="font-size:50px;" class="glyphicon glyphicon-plus"></span> <br>
 			  Thêm Sinh Viên
 			  </a>
+        <a href="?menu=themgv" id="themgv" class="list-group-item" style="text-align:center">
+			  <span style="font-size:50px;" class="glyphicon glyphicon-plus-sign"></span> <br>
+			  Thêm Giang vien
+			  </a>
 			  <a href="?menu=quanlykhoa" id="quanlykhoa" class="list-group-item" style="text-align:center">
 			  <span style="font-size:50px;" class="glyphicon glyphicon-cog"></span> <br>
 			  Quản Lý Khoa
@@ -117,7 +128,9 @@
 					include_once('bangdk.php');
 				} elseif($_GET["menu"] == "them"){
 					include_once('them.php');
-				} elseif($_GET["menu"] == "quanlysv"){
+				} elseif($_GET["menu"] == "themgv"){
+          include_once('themgv.php');
+        } elseif($_GET["menu"] == "quanlysv"){
 					include_once('quanlysv.php');
         } elseif($_GET["menu"] == "quanlykhoa"){
           include_once('quanlykhoa.php');

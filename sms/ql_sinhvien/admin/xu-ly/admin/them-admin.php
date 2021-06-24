@@ -24,7 +24,7 @@
       	</span> Đã tồn tại, Vui lòng chọn tên khác.
     	</div>
 	<?php } else{
-		$themsv = "INSERT INTO `tai_khoan` (`id_tai_khoan`, `ten_tai_khoan`, `mat_khau`, `nhom_tai_khoan`, `ten_sinh_vien`, `lop_sinh_vien`, `khoa_sinh_vien`, `sdt`, `ngay_sinh`, `anh_dai_dien`, `nhan_xet`, `ngay_tao`) VALUES (NULL, '$tenadmin', '$matkhau', '1', '$tenadminht', '', '$quantrikhoa', '$sdt', '$ngaysinh', 'avatardf.png', '', NOW())";
+		$themsv = "INSERT INTO `tai_khoan` (`id_tai_khoan`, `ten_tai_khoan`, `mat_khau`, `nhom_tai_khoan`, `ten_sinh_vien`, `lop_sinh_vien`, `khoa_sinh_vien`, `sdt`, `ngay_sinh`, `anh_dai_dien`, `nhan_xet`, `ngay_tao`) VALUES (NULL, '$tenadmin', '$matkhau', '1', '$tenadminht', '', '$quantrikhoa', '$sdt', '$ngaysinh', 'avatardf.jpg', '', NOW())";
 		mysqli_query($conn, $themsv); ?>
 			<div class="alert alert-success fade in" role="alert">
 	      	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>

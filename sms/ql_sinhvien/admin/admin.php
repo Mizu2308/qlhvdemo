@@ -41,6 +41,10 @@
             <span class="glyphicon glyphicon-plus"></span>
             Thêm Sinh Viên
             </a></li>
+            <li><a href="../admin/?menu=themgv" id="themgv">
+            <span class="glyphicon glyphicon-plus-sign"></span>
+            Thêm Giang vien
+            </a></li>
             <li><a href="../admin/?menu=quanlykhoa" id="quanlykhoa">
             <span class="glyphicon glyphicon-cog"></span>
             Quản Lý Khoa

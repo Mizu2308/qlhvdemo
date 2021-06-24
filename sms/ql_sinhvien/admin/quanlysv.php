@@ -18,12 +18,8 @@
 			<hr>
 			<div class="row">
 				<table class="table table-bordered table-responsive">
-					<tr class="chimuc">
-						<th>ID</th>
-						<th>Mã Sinh Viên</th>
-						<th>Tên Sinh Viên</th>
-						<th>Khoa</th>
-						<th>
+					<tr>
+					<th>
 						<select class="form-control input-sm" id="dulieulop">
 							<option value="">Chọn Lớp</option>
 							<?php $sqllop = "SELECT `ten_lop` FROM `lop`";
@@ -36,10 +32,33 @@
 							<?php } ?>
 						</select>
 						</th>
+						
+						</tr><th>Giảng viên</th>
+						<tr class="chimuc">
+						<th>ID</th>
+						<th>Mã Giang Viên</th>
+						<th>Tên Giang Viên</th>
+						<th>Khoa</th>
+						
 						<th>SĐT</th>
 						<th>Ngày Sinh</th>
 						<th>Quản Lý</th>
+						<th>Chức năng</th>
 					</tr>
+						<tbody id="hienthidulieuGV"></tbody>
+						<th>Sinh vien</th>
+					<tr class="chimuc">
+						<th>ID</th>
+						<th>Mã Sinh Viên</th>
+						<th>Tên Sinh Viên</th>
+						<th>Khoa</th>
+						
+						<th>SĐT</th>
+						<th>Ngày Sinh</th>
+						<th>Quản Lý</th>
+						<th>Chức năng</th>
+					</tr>
+					
 					<tbody id="hienthidulieulop">
 					</tbody>
 				</table>
@@ -74,13 +93,23 @@
  		$('a#bangdk').removeClass('chon');
  		$('a#quanlykhoa').removeClass('chon');
 
+		 $('#dulieulop').change(function(event) {
+ 			var id = $(this).val();
+			$.get('xu-ly/giang-vien/du-lieu-lop.php',{id:id}, function(data) {
+				$('#hienthidulieuGV').html(data);
+			});
+ 		});
+
+		 $.get('xu-ly/giang-vien/du-lieu-lop.php',{id: ""}, function(data) {
+			$('#hienthidulieuGV').html(data);
+		});
+
  		$('#dulieulop').change(function(event) {
  			var id = $(this).val();
 			$.get('xu-ly/sinh-vien/du-lieu-lop.php',{id:id}, function(data) {
 				$('#hienthidulieulop').html(data);
 			});
  		});
-
 		$.get('xu-ly/sinh-vien/du-lieu-lop.php',{id: ""}, function(data) {
 			$('#hienthidulieulop').html(data);
 		});

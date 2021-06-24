@@ -27,10 +27,10 @@
 	 ?>
 		<div class="alert alert-success fade in" role="alert">
       	<button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">×</span><span class="sr-only">Close</span></button>
-      	<strong>GOOD!</strong> Đăng nhập thành công, trở về trang chủ sau 3s.
+      	<strong>GOOD!</strong> Đăng nhập thành công, trở về trang chủ sau 1s.
     	</div>
     	<script>
-    	window.setTimeout(function(){window.location.href="../index.php";}, 3000);
+    	window.setTimeout(function(){window.location.href="../index.php";}, 1000);
     	</script>
 	<?php } else { ?>
 		<div class="alert alert-warning fade in" role="alert">
